@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/dz_for_staj/static/css/main.1e9a9baa.css",
-    "main.js": "/dz_for_staj/static/js/main.1f2ca07a.js",
+    "main.css": "/dz_for_staj/static/css/main.e8c01059.css",
+    "main.js": "/dz_for_staj/static/js/main.08da8e33.js",
     "static/js/787.66cb4309.chunk.js": "/dz_for_staj/static/js/787.66cb4309.chunk.js",
-    "static/media/avatar.png": "/dz_for_staj/static/media/avatar.d947cb9d0d13765666b6.png",
     "index.html": "/dz_for_staj/index.html",
-    "main.1e9a9baa.css.map": "/dz_for_staj/static/css/main.1e9a9baa.css.map",
-    "main.1f2ca07a.js.map": "/dz_for_staj/static/js/main.1f2ca07a.js.map",
+    "main.e8c01059.css.map": "/dz_for_staj/static/css/main.e8c01059.css.map",
+    "main.08da8e33.js.map": "/dz_for_staj/static/js/main.08da8e33.js.map",
     "787.66cb4309.chunk.js.map": "/dz_for_staj/static/js/787.66cb4309.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e9a9baa.css",
-    "static/js/main.1f2ca07a.js"
+    "static/css/main.e8c01059.css",
+    "static/js/main.08da8e33.js"
   ]
 }
