@@ -24,7 +24,7 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
     //             ? s.red : ""}`
     //     + `${className ? ' ' + className : ''}` // задачка на смешивание классов
 
-     const finalClassName = s.button  + ` ${disabled ?  s.disabled : xType == "red" ? s.red : xType == "secondary" ? s.secondary : ""} ${s.default}`
+     const finalClassName = s.button  + ` ${disabled ?  s.disabled : xType == "red" ? s.red : xType == "secondary" ? s.secondary : ""}  ${s.default}`
     // const finalClassName = `${disabled ? s.disabled : xType == "red" ? `${s.red} ${s.default}` : s.default} ${className? ' ' + className : ''}`
 
     // const finalClassName = s.button

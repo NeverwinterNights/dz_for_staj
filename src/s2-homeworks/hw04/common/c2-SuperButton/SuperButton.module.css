@@ -1,5 +1,6 @@
 .button {
     width: 170px;
+    background-color: #7dacd8;
 }
 
 .disabled {
@@ -13,7 +14,7 @@
 }
 
 .default {
-    background-color: #7dacd8;
+
     padding: 5px 20px;
 }
 
