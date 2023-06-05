@@ -11,6 +11,8 @@
 }
 
 .errorInput {
+    border-width: 5px;
+    border-color: #cc0000;
 }
 
 .errorInput:focus {
