@@ -1,4 +1,5 @@
 .sidebar {
+
 }
 
 .sidebar.open {
@@ -11,12 +12,15 @@
 }
 
 .nav a {
+    margin: 0 10px;
 }
 
 .nav a:hover {
 }
 
 .nav a.active {
+    color: #00cc22;
+    background-color: blue;
 }
 .close {
 }
