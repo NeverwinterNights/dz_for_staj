@@ -34,34 +34,38 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
 
 
         onChangeOption && onChangeOption(e.currentTarget.name)
+        console.log("value", e.currentTarget.value)
         // делают студенты
     }
     const finalRadioClassName = s.radio + (className ? ' ' + className : '')
     const spanClassName = s.span + (spanProps?.className ? ' ' + spanProps.className : '')
 
     const mappedOptions: any[] = options
-        ? options.map((o) => (
-            <label key={name + '-' + o.id} className={s.label}>
-                <input
-                    id={id + '-input-' + o.id}
-                    className={finalRadioClassName}
-                    type={'radio'}
-                    name={o.id}
-                    checked={value == o.id}
+        ? options.map((o) => {
 
+            return (
+                <label key={name + '-' + o.id} className={s.label}>
+                    <input
+                        id={id + '-input-' + o.id}
+                        className={finalRadioClassName}
+                        type={'radio'}
+                        name={o.id}
+                        checked={value == o.id}
+                        value={id + '-input-' + o.id}
 
-                    onChange={onChangeCallback}
-                    {...restProps}
-                />
-                <span
-                    id={id + '-span-' + o.id}
-                    {...spanProps}
-                    className={spanClassName}
-                >
+                        onChange={onChangeCallback}
+                        {...restProps}
+                    />
+                    <span
+                        id={id + '-span-' + o.id}
+                        {...spanProps}
+                        className={spanClassName}
+                    >
                       {o.value}
                   </span>
-            </label>
-        ))
+                </label>
+            )
+        })
         : []
 
     return <div className={s.options}>{mappedOptions}</div>
