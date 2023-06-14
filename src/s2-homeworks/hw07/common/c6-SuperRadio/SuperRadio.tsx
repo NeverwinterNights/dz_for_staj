@@ -46,10 +46,10 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
             return (
                 <label key={name + '-' + o.id} className={s.label}>
                     <input
-                        id={id + '-input-' + o.id}
+                        id={name + '-input-' + o.id}
                         className={finalRadioClassName}
                         type={'radio'}
-                        name={o.id}
+                        name={name}
                         checked={value === o.id}
                         value={o.id}
 
