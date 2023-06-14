@@ -46,7 +46,7 @@ const SuperRadio: React.FC<SuperRadioPropsType> = ({
             return (
                 <label key={name + '-' + o.id} className={s.label}>
                     <input
-                        id={name + '-input-' + o.id}
+                        id={id + '-input-' + o.id}
                         className={finalRadioClassName}
                         type={'radio'}
                         name={name}
