@@ -37,13 +37,54 @@ const HW13 = () => {
                 setCode('Код 200!')
                 setImage(success200)
                 // дописать
+                setInfo(res.data.info)
+                setText(res.data.errorText)
 
             })
             .catch((e) => {
                 // дописать
+                setText(e.message)
+                if (e.message === "Request failed with status code 500") {
+                    setCode(`Ошибка ${e.response.status}!!`)
+                    setInfo(e.response.data.info)
+                    setText(e.response.data.errorText)
+                    setImage(error500)
+                } else if (e.message === "Request failed with status code 400") {
+                    setCode(`Ошибка ${e.response.status}!!`)
+                    setImage(error400)
+                    setInfo(e.response.data.info)
+                    setText(e.response.data.errorText)
+                } else {
+                    setImage(errorUnknown)
+                    setCode('Error')
+                    setInfo(e.name)
+                    setText(e.message)
+                }
+
 
             })
+            // .catch((e) => {
+            //     // дописать
+            //     if (e.response.status) {
+            //         console.log(e.response.data.errorText)
+            //         setCode(`Ошибка ${e.response.status}!!`)
+            //         setImage(e.response.status === 500 ? error500 : error400)
+            //         setInfo(e.response.data.info)
+            //         setText(e.response.data.errorText)
+            //
+            //     } else {
+            //         // console.log(e.name, e.message)
+            //         setImage(errorUnknown)
+            //         setCode('Error')
+            //         setInfo(e.name)
+            //         setText(e.message)
+            //     }
+            // })
+
     }
+    // Ошибка 500!!
+    // эмитация ошибки на сервере
+    // ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)
 
     return (
         <div id={'hw13'}>
@@ -56,6 +97,7 @@ const HW13 = () => {
                         onClick={send(true)}
                         xType={'secondary'}
                         // дописать
+                        disabled={info === "...loading"}
 
                     >
                         Send true
@@ -65,7 +107,7 @@ const HW13 = () => {
                         onClick={send(false)}
                         xType={'secondary'}
                         // дописать
-
+                        disabled={info === "...loading"}
                     >
                         Send false
                     </SuperButton>
@@ -74,7 +116,7 @@ const HW13 = () => {
                         onClick={send(undefined)}
                         xType={'secondary'}
                         // дописать
-
+                        disabled={info === "...loading"}
                     >
                         Send undefined
                     </SuperButton>
@@ -83,7 +125,7 @@ const HW13 = () => {
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
                         // дописать
-
+                        disabled={info === "...loading"}
                     >
                         Send null
                     </SuperButton>
